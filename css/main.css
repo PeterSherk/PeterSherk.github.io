@@ -1,12 +1,8 @@
 body {
-	background-color: #58585A;
+	background-color: #CCCCCC;
 	font-family: 'minecraft', Times; /*Font found on fontsforweb.com @author: D3X Solutions-Seth Moon*/
 	/*the color for the grey is #58585A
 	  the color for the orange is #F1592A*/
-}
-
-p {
-	color: white;
 }
 
 a:hover {
@@ -39,6 +35,6 @@ li a {
 
 /*Buffer between menu bar and content*/
 .buffer {
-    margin-top: 35px;
-    color: #32F9FF; /*Color for text, a blue*/
+    margin-top: 50px;
+    color: black;
 }
