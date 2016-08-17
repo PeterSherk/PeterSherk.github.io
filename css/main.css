@@ -28,7 +28,9 @@ li {
 li a {
     display: block;
     color: white;
-    padding: 20px;
+    padding-left: 1.25em;
+    padding-bottom: 1.25em;
+    padding-top: 1.25em;
     text-decoration: none;
 }
 
