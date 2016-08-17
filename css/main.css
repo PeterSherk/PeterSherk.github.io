@@ -36,6 +36,6 @@ li a {
 
 /*Buffer between menu bar and content*/
 .buffer {
-    margin-top: 5%;
+    margin-top: 3.75em;
     color: black;
 }
