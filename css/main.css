@@ -8,19 +8,6 @@ a:hover {
 	color: #32F9FF;
 }
 
-/*Code for Top Menu Bar*/
-.topbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #F1592A;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
 li {
     float: left;
 }
@@ -32,10 +19,4 @@ li a {
     padding-bottom: 1.25em;
     padding-top: 1.25em;
     text-decoration: none;
-}
-
-/*Buffer between menu bar and content*/
-.buffer {
-    margin-top: 3.75em;
-    color: black;
 }
