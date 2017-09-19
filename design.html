@@ -1,0 +1,121 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Peter D. Sherk</title>
+	<link rel="icon" href="images/icon.png" />
+	<meta name="viewport" content="width=device-width" user-scalable=yes>
+	<meta name="description" content="Personal Website and Sandbox">
+	<meta name="author" content="Peter Dafoe Sherk">
+	<style type="text/css"> @import url('css/main.css');</style>
+	<!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- JavaScript library -->
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="https://petersherk.github.io/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li><a href="https://www.csc.ncsu.edu/" target="_blank">NC State</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav">
+		        <li><a href="docs/resume_peter_sherk.pdf" target="_blank">Resume</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav">
+		        <li><a href="mailto:pdsherk@ncsu.edu">Contact</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav">
+		        <li><a href="https://github.com/PeterSherk" target="_blank">GitHub</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav">
+		        <li><a href="design.html" target="_self">Design</a></li>
+		      </ul>
+		    </div>
+		</div>
+	</nav>
+	<div>
+		<center>
+			<h1>Volvo</h1>
+			<p>At Volvo, I was tasked with remaking their Project Tracker application by myself.</p><br>
+			<!-- Volvo Disclaimer -->
+			<div class="alert alert-warning alert-dismissible fade in" style="width: 45%">
+		  		<button type="button" class="close" data-dismiss="alert">&times;</button>
+			  	<h4>Disclaimer</h4>
+			 	<p>Volvo owns and operates all rights to the Project Tracker.</p>
+			</div>
+			<h2>Project Tracker</h2><br>
+			<p>The Project Tracker is an application used by Requirements Managers to track their progress on various Projects. After seeing the requested updates and the current application, I decided to rewrite the application in C# using Windows Forms. My goals were simplicity and functionality.</p><br>
+			<!-- Old Volvo -->
+			<h3>The Old</h3><br>
+			<p>As you can see, there are multiple problems:<br><br>First, a password prompt that doesn't require an input for authentication.<br>Second, there are multiple prompts to save edits or continue editing.<br>Third, multiple options on the top right bar are inactive in edit mode, which may be confusing for the user.
+			</p><br>
+			<img src="images/old.gif" class="img-rounded" alt="A picture of my face." style="width: 80%;"><br><br>
+			<!-- New Volvo -->
+			<h3>The New</h3><br>
+			<p>Now, authentication is done on the back end. The user doesn't need to know how the permissions are done, just that they have access to their data.<br><br>A few things have also been shuffled around:<br><br>The cancel edits button now only appears in edit mode, when it would be necessary to use.<br>Also, the items on the right hand side can be collapsed for a smaller view. Since these items aren't used often, I grouped them together.<br>The user requested that the two Create Project and Create Sub-Project buttons still be deactivated in edit mode.</p><br>
+			<img src="images/editGates.gif" class="img-rounded" alt="A picture of my face." style="width: 80%;"><br><br>
+			<!-- Create Project -->
+			<h3>Create a Project</h3><br>
+			<p>Let us begin at the start of the user flow; creating a Project.<br><br>One of my main goals for this project was to make the overall application smaller, while adding functionality.<br>Another goal was simplicity, achieved through larger text and simpler UI.</p><br>
+			<img src="images/addProject.gif" class="img-rounded" alt="A picture of my face." style="width: 80%;"><br><br>
+			<!-- Create Sub-Project -->
+			<h3>Add a Sub-Project</h3><br>
+			<p>Another important feature they wanted was Sub-Projects, each with their own data but under an umbrella Project.<br><br>You can see again my overall goal of simplicity. Clicking the add Sub-Project button pulls up a prompt to enter a name and submit it, nothing else.<br>It automatically updates the tree view as well as selects the new Sub-Project.<br>The user wanted to see all Sub-Projects gates, so a new row is added in the Gates view. I have made the currently selected gate highlighted in blue.</p><br>
+			<img src="images/addSubProj.gif" class="img-rounded" alt="A picture of my face." style="width: 80%;"><br><br>
+			<!-- Delete and Rename Project -->
+			<h3>Delete and Rename Project</h3><br>
+			<p>I decided to put the edit/delete Project actions inside of a drop-down. Since this is a more serious operation used sparingly, it didn't need to be in view.<br>The edit operation automatically updates in the tree view as well as in the Project drop-down. Error checking is done to make sure the new ID doesn't already exist.</p><br>
+			<img src="images/deleteAndRenameProj.gif" class="img-rounded" alt="A picture of my face." style="width: 80%;"><br><br>
+			<!-- Delete Sub-Project -->
+			<h3>Delete Sub-Project</h3><br>
+			<p>You can see there are two options to delete a Sub-Project, a menu item or a right click, for those more tech savvy.<br>Since Volvo has a varying age population, I wanted to design something that is usable by all ages and tech knowledge levels.</p><br>
+			<img src="images/deleteSubProj.gif" class="img-rounded" alt="A picture of my face." style="width: 80%;"><br><br>
+			<!-- Add Role -->
+			<h3>Add Role</h3><br>
+			<p>Roles are extremely important for Projects. This was built for Requirements Managers, who need to know who to contact for various Projects.<br>Since people may have multiple roles, I allowed a person to be added to the system multiple times.<br>After addition, a person is permanently added to their corresponding drop-down, accessible across Projects.<br>The RM's requested that after addition, the system go into edit mode and the person auto-added to the role for that Project.</p><br>
+			<img src="images/addRole.gif" class="img-rounded" alt="A picture of my face." style="width: 80%;"><br><br>
+			<!-- Edit and Delete Role-->
+			<h3>Edit and Delete Role</h3><br>
+			<p>You can see there are multiple options for searching users in the system. Once selected, you can update or delete.<br>The corresponding drop-downs reflect changes, but assignments in Projects are left alone. So if someone is removed from the system, they aren't removed from a potentially closed Project.</p><br>
+			<img src="images/editAndDeleteRole.gif" class="img-rounded" alt="A picture of my face." style="width: 80%;"><br><br>
+			<!-- Email -->
+			<h3>Email</h3><br>
+			<p>Being able to email people is essential. If they are added to the system, they can be contacted. A simple drag-drop or double click lets a user easily select who to email. An Outlook template is then generated.<br>If there are people in the current Project who are in the system, they are auto-added to the right-hand side.</p><br>
+			<img src="images/email.gif" class="img-rounded" alt="A picture of my face." style="width: 80%;"><br><br>
+			<!-- Filter -->
+			<h3>Filter</h3><br>
+			<p>A requested feature was filtering by Open/Closed Projects. I added these to the menu bar.</p><br>
+			<img src="images/fileOptions.gif" class="img-rounded" alt="A picture of my face." style="width: 80%;"><br><br>
+			<!-- Overall -->
+			<h3>Overall</h3><br>
+			<p>Overall, the new application was 33.33% smaller than the old one, with a lot of added functionality. My goals for the summer were to design a simpler system that catered to a variety of people. Since it was only me working on this, I had a lot of autonomy to make some interesting design decisions, some good and some bad. It was an interesting and challenging project, and I hope the improvements I made help Volvo workers in their day-to-day operations.</p><br>
+			<img src="images/newoverold.png" class="img-rounded" alt="A picture of my face." style="width: 80%;"><br><br>
+			<h2>RDNA</h2><br>
+			<p>My job for Volvo's RDNA application was mainly maintenance, fixing broken operations and making things easier to use.<br>My main focus for this application was the Status page, which displays regulations for a Project.</p><br>
+			<!-- Old RDNA -->
+			<h3>The Old</h3><br>
+			<p>You can see that the layout of things are a little hectic. It is not clear what Your Regulations does, and how it differs from a sort.<br>The text change buttons in the top right also didn't help, since the text didn't magnify at all.<br>Modifying a Plan of Action didn't work either, and it was unclear when you could modify.</p><br>
+			<img src="images/oldStatus.png" class="img-rounded" alt="A picture of my face." style="width: 80%;"><br><br>
+			<!-- New RDNA -->
+			<h3>The New</h3><br>
+			<p>Multiple things have now changed. All filters are located inside one button, and when a filter is set a pink ribbon runs along the left-hand side.<br>Also, the modify button doesn't appear unless you have typed something to add to the Plan of Action, so the user knows what action they are taking.<br>I also removed the text resize buttons and made the text larger all-around.<br>An export to Excel button was requested, and is added to the top when a project is selected. This allows the user to filter through data in a powerful program like Excel.</p>
+			<img src="images/rdnaStatus.gif" class="img-rounded" alt="A picture of my face." style="width: 80%;"><br><br>
+		</center>
+	</div>
+</body>
+</html>

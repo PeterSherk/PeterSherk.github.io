@@ -8,6 +8,10 @@ a:hover {
 	color: #32F9FF;
 }
 
+p {
+    font-size: 1.1em;
+}
+
 li {
     float: left;
 }
